@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">发送位置Demo</string>
+    <string name="main_search_empty">什么都没找到</string>
+    <string name="main_search_hint">输入要检索的关键字</string>
+    <string name="map_send_text">发送位置</string>
+    <string name="picker_internalerror">发生错误</string>
+</resources>

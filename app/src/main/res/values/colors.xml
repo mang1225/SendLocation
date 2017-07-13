@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="picker_grey">#999</color>
+    <color name="picker_grey_darker">#8e8e8e</color>
+    <color name="picker_list_divider">#dadada</color>
+
+    <color name="picker_status_color">#808080</color>
+    <color name="picker_main_color">#0277bd</color>
+    <color name="picker_black">#000000</color>
+    <!-- Map -->
+    <color name="picker_map_nearby_header_color">@color/picker_main_color</color>
+    <color name="picker_map_nearby_divider">@color/picker_list_divider</color>
+    <color name="picker_map_place_subtitle">@color/picker_grey</color>
+    <color name="picker_map_controller_subtitle">@color/picker_grey_darker</color>
+    <color name="picker_map_controller_background_normal">#ffffffff</color>
+    <color name="picker_map_controller_background_pressed">#fff</color>
+</resources>

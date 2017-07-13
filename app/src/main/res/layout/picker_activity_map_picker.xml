@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/container">
+
+        <RelativeLayout
+            android:id="@+id/mapholder"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+
+            <ImageButton
+                android:id="@+id/define_my_location"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="false"
+                android:src="@drawable/conv_location_icon"
+                android:background="@drawable/picker_map_controllers"
+                android:scaleType="center"
+                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentBottom="true" />
+            <ImageView
+                android:id="@+id/bmap_center_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="45dp"
+                android:src="@drawable/picker_map_local_icon" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/mapholder"
+            android:id="@+id/listNearbyHolder"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/loading"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/status"
+                    android:textSize="@dimen/picker_status_size"
+                    android:textColor="@color/picker_status_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ListView
+                    android:id="@+id/list"
+                    android:dividerHeight="1px"
+                    android:divider="@drawable/picker_map_nearby_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/searchCont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/searchList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/main_search_empty"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/searchHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/main_search_hint"
+            android:textSize="18sp" />
+    </FrameLayout>
+</FrameLayout>
